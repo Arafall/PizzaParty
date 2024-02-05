@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // The id is grabbed from the R class which stores the xml id index as a constant.
         mNumAttendEditText = findViewById(R.id.num_attend_edit_text);
         mNumPizzasTextView = findViewById(R.id.num_pizzas_text_view);
-        //mHowHungryRadioGroup =
+        mHowHungryRadioGroup = findViewById(R.id.hungry_radio_group);
     }
 
     // calculateClick is called from a button component interaction and
@@ -42,12 +42,22 @@ public class MainActivity extends AppCompatActivity {
         String numAttendStr = mNumAttendEditText.getText().toString();
         int numAttend = Integer.getInteger(numAttendStr);
 
+        int slicesPerPerson = 0;
+        int checkedId = mHowHungryRadioGroup.getCheckedRadioButtonId();
+        if (checkedId == R.id.light_radio_button) {
+            slicesPerPerson = 2;
+        }
+        else if (checkedId == R.id.medium_radio_button) {
+            slicesPerPerson = 3;
+        }
+        else if (checkedId == R.id.ravenous_radio_button) {
+            slicesPerPerson = 4;
+        }
+
         // Calculate how many total pizzas required based on number of people, pieces for each person,
         // and the constant for slices on each pizza.
         // Multiply number of people with how many slices each gets rounded
-        // up to get total slices needed.
-        // Now divided by the slice number of each pizza to get total pizzas required.
-        int slicesPerPerson = 4;
+        // up to get total slices needed, then divide by slices per pizza for total pizzas.
         int totalPizzas = (int) Math.ceil(numAttend * slicesPerPerson / (double) SLICES_PER_PIZZA);
         // Set a text display asset to show the calculated number.
         // Calls setText method to change text output to the view;

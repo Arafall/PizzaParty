@@ -86,8 +86,8 @@
 
     <RadioGroup
         android:id="@+id/hungry_radio_group"
-        android:layout_width="116dp"
-        android:layout_height="173dp"
+        android:layout_width="126dp"
+        android:layout_height="144dp"
         android:layout_marginBottom="280dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,19 +98,19 @@
 
         <RadioButton
             android:id="@+id/light_radio_button"
-            android:layout_width="106dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Light" />
 
         <RadioButton
             android:id="@+id/medium_radio_button"
-            android:layout_width="106dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium" />
 
         <RadioButton
             android:id="@+id/ravenous_radio_button"
-            android:layout_width="106dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ravenous" />
 

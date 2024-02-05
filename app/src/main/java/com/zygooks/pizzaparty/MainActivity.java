@@ -40,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
         // Take the text value from the saved text box component and
         // convert it to an integer for calculations.
         String numAttendStr = mNumAttendEditText.getText().toString();
-        int numAttend = Integer.getInteger(numAttendStr);
+        int numAttend = Integer.parseInt(numAttendStr);
 
         int slicesPerPerson = 0;
+        // Get the index of what radio button was selected and change
+        // how many slices are set for each individual.
         int checkedId = mHowHungryRadioGroup.getCheckedRadioButtonId();
         if (checkedId == R.id.light_radio_button) {
             slicesPerPerson = 2;

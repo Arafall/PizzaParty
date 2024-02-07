@@ -5,15 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pizza_background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="@android:drawable/divider_horizontal_textfield"
+        android:backgroundTint="#00E91E63"
         android:labelFor="@id/num_attend_edit_text"
-        android:text="Number of people?"
+        android:shadowColor="@color/black"
+        android:text="@string/number_of_people"
+        android:textColor="@color/black"
+        android:textSize="@dimen/label_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +35,6 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -46,7 +50,8 @@
         android:layout_marginTop="112dp"
         android:layout_marginEnd="138dp"
         android:labelFor="@id/hungry_radio_group"
-        android:text="How hungry?"
+        android:text="@string/attendee_hunger"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginEnd="132dp"
-        android:text="Total pizzas: ?"
+        android:text="@string/total_pizzas"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/calc_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +83,7 @@
         android:layout_marginBottom="220dp"
         android:background="@android:drawable/alert_light_frame"
         android:onClick="calculateClick"
-        android:text="Calculate"
+        android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -100,19 +105,19 @@
             android:id="@+id/light_radio_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Light" />
+            android:text="@string/hunger_type_light" />
 
         <RadioButton
             android:id="@+id/medium_radio_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:text="@string/hunger_type_medium" />
 
         <RadioButton
             android:id="@+id/ravenous_radio_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ravenous" />
+            android:text="@string/hunger_type_ravenous" />
 
     </RadioGroup>
 
